@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import OSDviewer from './OSDviewer'
+import SideBar from './SideBar'
 
 function App() {
+  const [images, setImages] = useState([])
+
+  const [selectedImage, setSelectedImage] = useState();
+
+  const selectImage = (slide) => {
+    setSelectedImage(slide.slide);
+  };
+
+  //fetches asynchronously images from url
+  const getImages = async () => {
+    const response = await fetch("https://openslide-demo.s3.dualstack.us-east-1.amazonaws.com/info.json")
+    let image = await response.json();
+    setImages(image.groups)
+  }
+
+  //runs after mounting
+  useEffect(() => {
+    getImages();
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className='label'>
+        {/* sidebar for image titles from where you can choose which image to display */}
+        <SideBar images={images} selectImage={selectImage} />
+      </div>
+      <div className='osdContainer'>
+        <OSDviewer image={selectedImage} />
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
