@@ -5,9 +5,69 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #191919;
+  box-sizing: border-box;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  justify-content: 'space-between';
+  color: white;
+}
+
+.label {
+  flex: 18%;
+  max-width: 18%;
+}
+
+.imageLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  display: inline-block;
+  background: #2ECC71;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.osdContainer {
+  flex: 75%;
+  height: fit-content;
+  padding: 10px;
+  border: 4px #2ECC71 solid;
+  border-radius: 5px;
+  background: white;
+  color: black;
+  margin: 20px;
+  top: 20px;
+  position: sticky;
+}
+
+#openSeaDragon {
+  height: 600px;
+  max-width: 100%;
+}
+
