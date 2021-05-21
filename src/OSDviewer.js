@@ -47,24 +47,6 @@ const OSDviewer = ({image}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // useEffect(() => {
-    //     if (overlay) {
-    //         let rect = new fabric.Rect({
-    //             left: 0,
-    //             top: 0,
-    //             fill: 'rgba(0, 0, 0, 0',
-    //             stroke: 'red',
-    //             strokeWidth: 5,
-    //             width: 200,
-    //             height: 200,
-    //         })
-    //         overlay.fabricCanvas().add(rect)
-    //     }
-    //     // return () => {
-    //     //     overlay.fabricCanvas().clear()
-    //     // }
-    // }, [overlay])
-
     return (
         <div>
             <ToolBar overlay={overlay} />
