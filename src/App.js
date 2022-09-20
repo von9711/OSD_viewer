@@ -13,7 +13,10 @@ function App() {
 
   //fetches asynchronously images from url
   const getImages = async () => {
-    const response = await fetch("https://openslide-demo.s3.dualstack.us-east-1.amazonaws.com/info.json")
+    const response = await fetch("https://openslide-demo.s3.dualstack.us-east-1.amazonaws.com/info.json", {
+      headers: {
+        "Referer": "https://fancy-biscochitos-861b6e.netlify.app/"
+    })
     let image = await response.json();
     setImages(image.groups)
   }
