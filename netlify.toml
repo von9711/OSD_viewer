@@ -1,10 +1,9 @@
 [[redirects]]
-  from = "/info.json"
-  to = "<cross-origin-url>"
+  from = "/*"
+  to = "/index.html"
   status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+
 [[headers]]
   for = "/*"
-  [headers.values]
+    [headers.values]
     Access-Control-Allow-Origin = "*"
