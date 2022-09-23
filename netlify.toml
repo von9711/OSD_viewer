@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/api/*"
-  to = "https://openslide-demo.s3.dualstack.us-east-1.amazonaws.com/"
+  from = "/api"
+  to = "https://openslide-demo.s3.dualstack.us-east-1.amazonaws.com"
   status = 200
   force = true
 
