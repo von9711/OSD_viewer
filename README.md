@@ -7,7 +7,7 @@ A Web based viewer for displaying Whole Slide Images with zoom, pan and basic an
 
 Download slides from `https://portal.gdc.cancer.gov/`
 
-# Features
+## Features
 
 - Zoom-In/ Zoom-Out
 
@@ -26,7 +26,8 @@ Download slides from `https://portal.gdc.cancer.gov/`
 
    ![osd_4](https://user-images.githubusercontent.com/62811612/192136043-c54527ab-8ee9-40dd-bfa8-0ff0102abdeb.gif)
 
-# Technology Used
+## Technology Used
+
 - React -> A JavaScript library for building user interfaces.
 - Fabric.js -> a powerful and simple Javascript HTML5 canvas library.
 - OpenSeadragon -> An open-source, web-based viewer for high-resolution zoomable images.
@@ -35,9 +36,13 @@ Download slides from `https://portal.gdc.cancer.gov/`
 - Git -> A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 
-# Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+To install all the dependencies/packages
 
 ### `npm start`
 
